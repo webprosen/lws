@@ -1,20 +1,39 @@
-let x;
-x = 100;
-x = 200;
-console.log(x);
+let x  = 7;
 
+if (true) {
+    let x = 8;
+    console.log(x);
+}
+
+if (true) {
+    var y = 120;
+}
+
+console.log(x);
+console.log(y);
+
+let prosen = 15000;
+
+if(true){
+    let prosen = 20000;
+    console.log(prosen);
+}
+
+console.log(prosen);
+
+
+let chal = 100;
 
 {
-    let x;
-    x = 5000;
-    console.log(x);
+    let chal = 500;
 }
 
-
-function test(){
-    let x;
-    x = 6000;
-    console.log(x);
+{
+    let chal = 600;
 }
 
-test();
+{
+    let chal = 1000;
+}
+
+console.log(chal);
