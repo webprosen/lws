@@ -107,12 +107,10 @@
 }
 
 {
-    // Array ort Obeject check
+    // Array or Obeject check
     const number = [1,2,3];
     const person = {name: "prosen"};
 
-
-    
     // console.log(person instanceof  Array);
     // console.log(Array.isArray(person));
 }
