@@ -108,9 +108,17 @@
 
 {
     // Array or Obeject check
-    const number = [1,2,3];
-    const person = {name: "prosen"};
+    const numbers = [1,2,3]; //Array
+    const person = {name: "prosen"}; //Object
 
-    // console.log(person instanceof  Array);
-    // console.log(Array.isArray(person));
+    console.log(numbers instanceof  Array); // true
+    console.log(numbers instanceof  Object); // true
+
+    console.log(person instanceof  Array); // false
+    console.log(person instanceof  Object); // true
+
+
+    console.log(Array.isArray(numbers)); //true
+    console.log(Array.isArray(person)); //false
+    
 }
