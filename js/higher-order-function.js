@@ -159,3 +159,27 @@
 }
 
 // Custom higher order function making...
+
+{
+    var languages = ['JavaScript', 'PHP', 'Liquid', 'Pythodddn', 'Laravel'];
+
+    function mapProsen (arr, fn) {
+
+        const newArray = [];
+        for(let i = 0; i < arr.length; i++){
+            newArray.push(fn(arr[i]));
+        }
+        return newArray;
+    }
+
+    var languagesLength = mapProsen(languages, function(language){
+
+        return language.length;
+
+    });
+
+    console.log(languagesLength);
+    
+}
+
+
