@@ -5,24 +5,34 @@
 // XHR = Xml Http Request
 // GET, POST, PUT, DELETE
 
-// GET
 {
     const getButton = document.getElementById('get');
+    const sendButton = document.getElementById('send');
+
+    const sendRequest = function(method, url) {
+
+        const promise = new Promise((resolve, reject) => {
+
+            const xhr = new XMLHttpRequest();
+            xhr.open(method, url);
+            xhr.send();
+            xhr.responseType = "json";
+            xhr.onload = function () {
+                resolve(xhr.response);
+            };
+            
+        });
+        
+        return promise;
+    }
 
     const getData = function() {
-        
-        const xhr = new XMLHttpRequest();
-        
-        xhr.open("get", "https://jsonplaceholder.typicode.com/posts/1");
-        xhr.send();
-        xhr.responseType = "json";
-        xhr.onload = function () {
-            var result = xhr.response;
-            // result = JSON.parse(result);
+        sendRequest("get", "https://jsonplaceholder.typicode.com/todos/1")
+        .then(result => {
             console.log(result);
-        }
-
+        });
     }
 
     getButton.addEventListener("click", getData);
+    
 }
