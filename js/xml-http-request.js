@@ -5,9 +5,9 @@
 // XHR = Xml Http Request
 // GET, POST, PUT, DELETE
 
+// GET
 {
     const getButton = document.getElementById('get');
-    const sendButton = document.getElementById('send');
 
     const getData = function() {
         
@@ -15,19 +15,14 @@
         
         xhr.open("get", "https://jsonplaceholder.typicode.com/posts/1");
         xhr.send();
+        xhr.responseType = "json";
         xhr.onload = function () {
             var result = xhr.response;
-            result = JSON.parse(result);
+            // result = JSON.parse(result);
             console.log(result);
         }
 
     }
 
-    const sendData = function() {
-
-    }
-
     getButton.addEventListener("click", getData);
-    sendButton.addEventListener("click", sendData);
-
 }
