@@ -46,7 +46,7 @@
         sendRequest("post", "https://jsonplaceholder.typicode.com/posts", JSON.stringify({title: 'foo', body: 'prosen', userId: 1}))
         .then(result => {
             console.log(result);
-        }).catch((err)=>{
+        }).catch((err)=> {
             console.log(err);
         });
     }
