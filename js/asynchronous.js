@@ -35,9 +35,9 @@
 
 // Asynchronous behavior (2)
 {
-    const takeOrder = function(customer, callback) {
+    const takeOrder = function(customer, callback1) {
         console.log(`Take order for ${customer}`);
-        callback(customer);
+        callback1(customer);
     }
 
     const processOrder = function(customer, callback2) {
@@ -56,17 +56,9 @@
         console.log(`Completed order for ${customer}`);
     }
 
-    takeOrder("Prosen", (customer)=>{
-
-        processOrder(customer, (customer)=>{
-
-            completeOrder(customer);
-
+    takeOrder("Prosen", (p1)=>{
+        processOrder(p1, (p2)=>{
+            completeOrder(p2);
         });
-
     });
-
-    
 }
-
-console.log(200);
